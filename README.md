@@ -197,3 +197,5 @@ https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generat
 ---------- LICENSE ----------
 This project is open source under the MIT License.
 Feel free to use, contribute, and adapt to your needs.
+
+NOTE: STYLE.CSS IS ONLY GIVEN FOR CONTEXT OF DESIGN, OTHERWISE EACH PAGE HAS ITS OWN HTML+CSS FOR BETTER VISUALS AND ALIGNMENT.
