@@ -1,0 +1,421 @@
+/* LOGIN & SIGNUP PAGE STYLES */
+
+body, html {
+  height: 100%;
+  margin: 0;
+  background: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.main-container {
+  width: 380px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.form-toggle {
+  display: flex;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.form-toggle button {
+  flex: 1;
+  border: none;
+  background: none;
+  padding: 12px;
+  font-weight: 600;
+  color: #495057;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.form-toggle button.active,
+.form-toggle button:hover {
+  background: #0d6efd;
+  color: #fff;
+}
+
+.form-container {
+  display: flex;
+  width: 200%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.form-body {
+  width: 50%;
+  padding: 30px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.form-body h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 700;
+  color: #212529;
+}
+
+.form-body label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #495057;
+  margin-bottom: 5px;
+}
+
+.form-body input[type="text"],
+.form-body input[type="email"],
+.form-body input[type="password"] {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  width: 100%;
+  font-size: 14px;
+}
+
+.form-body input[type="text"]:focus,
+.form-body input[type="email"]:focus,
+.form-body input[type="password"]:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13,110,253,.25);
+}
+
+.form-body input[type="submit"] {
+  background: #0d6efd;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background 0.3s;
+}
+
+.form-body input[type="submit"]:hover {
+  background: #0b5ed7;
+}
+
+/* HOME PAGE STYLES */
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+#main-heading {
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #343a40;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card-body {
+  text-align: center;
+  padding: 30px;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.btn-block {
+  width: 100%;
+  padding: 10px 0;
+  font-weight: 500;
+  border-radius: 6px;
+}
+
+.btn-warning-outline {
+  color: #f0ad4e;
+  border: 1px solid #f0ad4e;
+}
+
+.btn-danger-outline {
+  color: #d9534f;
+  border: 1px solid #d9534f;
+}
+
+.btn-secondary-outline {
+  color: #6c757d;
+  border: 1px solid #6c757d;
+}
+
+.btn-success-outline {
+  color: #5cb85c;
+  border: 1px solid #5cb85c;
+}
+
+.btn-purple-outline {
+  color: #6f42c1;
+  border: 1px solid #6f42c1;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+/* LESSONS PAGE STYLES */
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 30px;
+}
+
+.btn {
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 10px 20px;
+}
+
+.btn-success-outline {
+  color: #5cb85c;
+  border: 1px solid #5cb85c;
+}
+
+.btn-primary-outline {
+  color: #0275d8;
+  border: 1px solid #0275d8;
+}
+
+.btn-danger-outline {
+  color: #d9534f;
+  border: 1px solid #d9534f;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #343a40;
+}
+
+.input-block,
+textarea.input-block {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 30px;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* QUIZ PAGE STYLES */
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 30px;
+}
+
+.btn {
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 10px 20px;
+}
+
+.btn-success-outline {
+  color: #5cb85c;
+  border: 1px solid #5cb85c;
+}
+
+.btn-primary-outline {
+  color: #0275d8;
+  border: 1px solid #0275d8;
+}
+
+.btn-danger-outline {
+  color: #d9534f;
+  border: 1px solid #d9534f;
+}
+
+.btn-secondary-outline {
+  color: #6c757d;
+  border: 1px solid #6c757d;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 30px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+label {
+  font-weight: 600;
+  color: #343a40;
+}
+
+.input-block,
+textarea.input-block {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+#quiz-score strong {
+  color: #5cb85c;
+}
+
+/* ASSIGNMENTS PAGE STYLES */
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  margin-top: 40px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+h2 {
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 30px;
+}
+
+.btn {
+  font-weight: 500;
+  border-radius: 6px;
+  padding: 10px 20px;
+}
+
+.btn-success-outline {
+  color: #5cb85c;
+  border: 1px solid #5cb85c;
+}
+
+.btn-primary-outline {
+  color: #0275d8;
+  border: 1px solid #0275d8;
+}
+
+.btn-danger-outline {
+  color: #d9534f;
+  border: 1px solid #d9534f;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 20px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(133, 37, 142, 0.12);
+}
+
+label {
+  font-weight: 600;
+  color: #343a40;
+}
+
+.input-block,
+textarea.input-block {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+textarea[readonly] {
+  background-color: #e9ecef;
+}
+
+/* STUDENT RECORDS PAGE STYLES */
+
+h1, h2 {
+      margin-top: 2rem;
+      font-weight: 700;
+    }
+    table {
+      margin-top: 1rem;
+    }

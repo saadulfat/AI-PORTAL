@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Students Portal - Home</title>
+    <link rel="shortcut icon" href="images/home.png" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <style>
+      body {
+        background-color: #f8f9fa;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .container {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      }
+
+      #main-heading {
+        font-weight: 700;
+        margin-bottom: 30px;
+        color: #343a40;
+      }
+
+      .card {
+        border: none;
+        border-radius: 12px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+      }
+
+      .card-body {
+        text-align: center;
+        padding: 30px;
+      }
+
+      .card-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+
+      .btn-block {
+        width: 100%;
+        padding: 10px 0;
+        font-weight: 500;
+        border-radius: 6px;
+      }
+
+      .btn-warning-outline {
+        color: #f0ad4e;
+        border: 1px solid #f0ad4e;
+      }
+
+      .btn-danger-outline {
+        color: #d9534f;
+        border: 1px solid #d9534f;
+      }
+
+      .btn-secondary-outline {
+        color: #6c757d;
+        border: 1px solid #6c757d;
+      }
+
+      .btn-success-outline {
+        color: #5cb85c;
+        border: 1px solid #5cb85c;
+      }
+
+      .btn-purple-outline {
+        color: #6f42c1;
+        border: 1px solid #6f42c1;
+      }
+
+      .btn:hover {
+        opacity: 0.9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-danger-outline" onclick="logoutUser()">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+      </div>
+
+      <div class="text-center">
+        <h2 id="main-heading">Student Portal</h2>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">
+                <i class="fas fa-calculator" style="color: orange"></i> Lessons
+              </h4>
+              <a href="/lesson">
+                <button class="btn btn-warning-outline btn-block">Lessons</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">
+                <i class="fas fa-tasks" style="color: red"></i> Quiz
+              </h4>
+              <a href="/quiz">
+                <button class="btn btn-danger-outline btn-block">Quiz</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">
+                <i class="fas fa-clock" style="color: slateblue"></i> Assignment
+              </h4>
+              <a href="/assignment">
+                <button class="btn btn-secondary-outline btn-block">Assignment</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">
+                <i class="fas fa-pencil-alt" style="color: yellowgreen"></i> Records
+              </h4>
+              <a id="records-link" href="#">
+                <button class="btn btn-success-outline btn-block">Records</button>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+    <script>
+      const email = localStorage.getItem('userEmail');
+      const recordsLink = document.getElementById('records-link');
+      if (email) {
+        recordsLink.href = `/records?email=${encodeURIComponent(email)}`;
+      } else {
+        recordsLink.onclick = function () {
+          alert('Please log in first!');
+          return false;
+        };
+      }
+
+      function logoutUser() {
+        localStorage.removeItem('userEmail');
+        window.location.href = "/"; // This will go to the Flask route for login
+      }
+    </script>
+  </body>
+</html>
