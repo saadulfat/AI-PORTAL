@@ -1,32 +1,40 @@
-from flask import Flask, request, jsonify, send_from_directory, render_template
+from flask import Flask, request, jsonify, send_from_directory, render_template, redirect
 from flask_cors import CORS
-from flask import redirect
 import mysql.connector
 import json
-from datetime import datetime, timedelta , timezone
-pkt = timezone(timedelta(hours=5))
+from datetime import datetime, timedelta, timezone
 import pytz
 from werkzeug.utils import secure_filename
 from werkzeug.security import generate_password_hash, check_password_hash
 from werkzeug.datastructures import MultiDict
 import os
 import requests
+from dotenv import load_dotenv  # ✅ Added
 
+# Load environment variables from .env
+load_dotenv()  # ✅ Added
+
+# Timezone setup
+pkt = timezone(timedelta(hours=5))
+
+# Flask app config
 app = Flask(__name__, static_url_path='/static', static_folder='static', template_folder='templates')
 CORS(app)
 
+# File uploads config
 UPLOAD_FOLDER = 'uploads'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-GEMINI_API_KEY = "AIzaSyAKdEVX6WEDiDkj685-v2biWttOkorIgiA"
+# Gemini API config
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")  # ✅ Securely loaded
 GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent"
 
 conn = mysql.connector.connect(
-    host='localhost',
-    user='root',
-    password='123abc',
-    database='student_portal'
+    host=os.getenv("DB_HOST"),
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD"),
+    database=os.getenv("DB_NAME")
 )
 cursor = conn.cursor(dictionary=True)
 
